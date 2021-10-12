@@ -4,11 +4,11 @@ Dynamic image gallery using ReactJS, CSS and mocky image API.
 
 ## feature
 
-> Dynamic images using API
-> Loader
-> Expanded view for every image.
+- Dynamic images using API
+- Loader
+- Expanded view for every image.
 
 ## Tech Stack
 
-> ReactJS
-> CSS
+- ReactJS
+- CSS
