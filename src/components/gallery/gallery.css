@@ -1,0 +1,30 @@
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.gallery img {
+  max-width: 15vw;
+  margin: 1rem;
+  border: 0.2em solid #332d2a;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 255, 0.3);
+}
+
+.expanded-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-image img {
+}
