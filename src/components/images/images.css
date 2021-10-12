@@ -1,0 +1,17 @@
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow-x: scroll;
+}
+
+.images img {
+  max-width: 15vw;
+  margin: 1rem;
+  border: 0.2em solid #332d2a;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 255, 0.3);
+}
