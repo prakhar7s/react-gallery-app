@@ -1,12 +1,12 @@
-import "./App.css";
+import React from "react";
 import Gallery from "./components/gallery/gallery";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="container">
       <Gallery />
     </div>
   );
-}
+};
 
 export default App;

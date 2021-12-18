@@ -10,6 +10,7 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [expandedImage, setExpandedImage] = useState(null);
+  const [dragId, setDragId] = useState("");
 
   useEffect(() => {
     fetchImages();
@@ -21,12 +22,13 @@ const Gallery = () => {
       .then((imageObjs) => {
         setLoading(false);
         setImages(
-          imageObjs.map((imgObj) => {
+          imageObjs.map((imgObj, idx) => {
             const { id, urls, alt_description: alt } = imgObj;
             return {
               id,
               alt,
               url: urls.regular,
+              order: idx,
             };
           })
         );
@@ -36,7 +38,13 @@ const Gallery = () => {
   return (
     <>
       {!isLoading ? (
-        <Images images={images} setExpandedImage={setExpandedImage} />
+        <Images
+          images={images}
+          setImages={setImages}
+          setExpandedImage={setExpandedImage}
+          dragId={dragId}
+          setDragId={setDragId}
+        />
       ) : (
         <Loader />
       )}
